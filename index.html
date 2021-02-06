@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,34 @@
 
     <title>Auth-form</title>
 </head>
+
 <body>
-   <script src="./script.js"></script> 
+    <div class="auth-forms-cnt">
+        <div class="auth-card">
+            <form action="" class="auth-forms">
+
+                <div class="auth-input">
+                    <label for="username">User name</label>
+                    <input type="text" name="username" placeholder="Enter your user name">
+                </div>
+
+                <div class="auth-input">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password">
+                </div>
+
+                
+                <div class="auth-input auth-checkbox">
+                    <input type="checkbox">
+                    <span>Submit form</span>
+                </div>
+
+                <button onclick="login()">Log in</button>
+        </div>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
