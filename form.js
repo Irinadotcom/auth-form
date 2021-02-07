@@ -5,15 +5,35 @@ const login = () => {
 
     let validationError = validate(userNameInput, passwordInput, isAuthCheckboxChecked);
     if (validationError == undefined) {
-    // логин процесс   
+        // логин процесс 
+        console.log("You are logged in");
     } else {
-    
-       // console.log('validation', validationError);
+        showError(validationError);
     }
-    
-    
-    console.log("on press", userNameInput, passwordInput)
 }
+
+const showError = (validationError) => {
+    let errorSpan = document.getElementById('error');
+
+    // console.log('validation', validationError);
+    errorSpan.innerHTML = validationError;
+    errorSpan.className = 'error';
+
+    setTimeout(hideError, 1000);
+}
+
+
+const hideError = () => {
+    document.getElementById('error').className = 'empty-error';
+
+    
+}
+
+
+document.getElementById("btn").addEventListener("click", function (e) {
+    e.preventDefault();
+    login();
+});
 
 const validate = (userName, password, isPolicyChecked) => {
     if (userName != "" && password != "" && isPolicyChecked) {
@@ -29,8 +49,9 @@ const validate = (userName, password, isPolicyChecked) => {
         if (isPassword == false) {
             return 'Enter password with lengh greater then 5.';
         }
+
     } else {
-    
-    return 'Please enter and check all fields!';
+
+        return 'Please enter and check all fields!';
     }
 }
