@@ -1,9 +1,9 @@
-const g = 9.8;
-const pi = 3.15;
+// const g = 9.8;
+// const pi = 3.15;
 
 
-let password = "";
-let username = "";
+// let password = "";
+// let username = "";
 
 // function f(x) {}
 
@@ -23,6 +23,6 @@ let username = "";
 //     console.log('Document is ready');
 // })
 
-const login = () => {
-    console.log('on press');
-}
+// const login = () => {
+//     console.log('on press');
+// }
